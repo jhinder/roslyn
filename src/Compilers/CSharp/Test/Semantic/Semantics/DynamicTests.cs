@@ -4030,7 +4030,7 @@ class C
             var comp = CreateCompilationWithMscorlib45AndCSharp(source, parseOptions: TestOptions.Regular7_2);
 
             comp.VerifyEmitDiagnostics(
-                // (8,17): error CS8364: Arguments with 'in' modifier cannot be used in dynamically dispatched expessions.
+                // (8,17): error CS8364: Arguments with 'in' modifier cannot be used in dynamically dispatched expressions.
                 //         d.M2(in x);
                 Diagnostic(ErrorCode.ERR_InDynamicMethodArg, "x").WithLocation(8, 17)
                 );
